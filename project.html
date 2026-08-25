@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project — Ashish John</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f2ec;color:#1a1a1a;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:#9c7a4d;color:#f5f2ec}
+a{color:#9c7a4d;text-decoration:none}
+a:hover{color:#1a1a1a}
+.tech a:hover{color:#1a1a1a}
+footer a:hover,.pn a:hover{color:#f2ece0}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.mono{font-family:'Space Mono',monospace}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(24px,5vw,72px)}
+.mut{color:#8a8278}
+.bronze{color:#9c7a4d}
+.body{color:#2c2820;font-size:clamp(16px,1.15vw,18px);line-height:1.62}
+.lbl{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a8278}
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid #e3dccd}
+.navin{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:23px;color:#1a1a1a;text-decoration:none;font-weight:500}
+.backlink{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5a554c;text-decoration:none;transition:color .25s}
+.backlink:hover{color:#9c7a4d}
+.ph{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:repeating-linear-gradient(135deg,#ece6da 0 13px,#e7dfd1 13px 26px);border:1px solid #dcd4c4}
+.phl{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7a7264;background:rgba(245,242,236,.78);border:1px solid #d3cab8;padding:9px 13px;text-align:center;line-height:1.5}
+.dnum{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,72px);line-height:1;color:#cfc6b2;font-weight:300}
+.dtitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(44px,7vw,104px);line-height:1.0;letter-spacing:-.02em;margin:8px 0 0}
+.dlede{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(22px,2.6vw,34px);line-height:1.3;color:#3a362e;max-width:30ch;margin:26px 0 0}
+.detail{display:grid;grid-template-columns:280px 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.facts{position:sticky;top:104px}
+.factrow{padding:16px 0;border-top:1px solid #ddd5c6}
+.factv{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,1.5vw,22px);font-weight:400;margin-top:5px;line-height:1.3}
+.bsec{margin-bottom:clamp(34px,4vw,54px)}
+.bsec h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(24px,2.4vw,32px);margin:0 0 14px;letter-spacing:-.01em}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gnorm{aspect-ratio:4/5}
+.gcine{aspect-ratio:16/9}
+.g-wide{grid-column:1/-1;aspect-ratio:16/7}
+img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;pointer-events:none}
+.tech{background:#ece7dd}
+.techgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
+.techcard{background:#fff;border:1px solid #ddd5c6}
+.techimg{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:clamp(12px,1.6vw,20px)}
+.techcap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 16px;border-top:1px solid #e8e2d6}
+.techfig{font-family:'Space Mono',monospace;white-space:nowrap;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#9c7a4d}
+.techname{font-family:'Cormorant Garamond',serif;font-size:19px;color:#1a1a1a}
+@media(max-width:860px){.techgrid{grid-template-columns:1fr 1fr}}
+.pn{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #322d24}
+.pncell{padding:clamp(28px,4vw,52px) 0;text-decoration:none;display:block;transition:background .3s}
+.pncell:hover{background:#1d1a15}
+.pnnext{text-align:right}
+.pntitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3vw,42px);color:#ece6da;margin-top:10px;transition:color .25s}
+.pncell:hover .pntitle{color:#9c7a4d}
+@media(max-width:860px){.detail{grid-template-columns:1fr;gap:30px}.facts{position:static}.gal{grid-template-columns:1fr}.dtitle{font-size:clamp(40px,11vw,64px)}}
+</style>
+</helmet>
+<div class="nav"><div class="wrap navin"><a href="index.html" class="brand">Ashish John</a><a href="index.html#work" class="backlink">← All Work</a></div></div>
+<header class="wrap" style="padding-top:clamp(56px,9vw,110px);padding-bottom:clamp(34px,5vw,64px)"><div class="dnum">{{ p.num }}</div><div class="lbl" style="margin-top:14px">{{ p.meta }}</div><h1 class="dtitle">{{ p.title }}</h1><p class="dlede">{{ p.lede }}</p></header>
+<section class="wrap" style="padding-bottom:clamp(48px,7vw,96px)"><div class="ph" style="position:relative;aspect-ratio:{{ heroAspect }};padding:0"><img class="js-hero" alt="{{ p.title }}" style="width:100%;height:100%;object-fit:cover;display:block" /><sc-if value="{{ p.noHero }}" hint-placeholder-val="{{ false }}"><span class="phl" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">{{ p.heroLabel }}</span></sc-if></div></section>
+<section class="wrap" style="padding-bottom:clamp(56px,8vw,110px)"><div class="detail"><div class="facts"><sc-for list="{{ facts }}" as="f" hint-placeholder-count="5"><div class="factrow"><div class="lbl">{{ f.k }}</div><div class="factv">{{ f.v }}</div></div></sc-for></div><div><div class="bsec"><h4>Overview</h4><p class="body" style="max-width:60ch">{{ p.overview }}</p></div><div class="bsec"><h4>Material &amp; Mood</h4><p class="body" style="max-width:60ch">{{ p.material }}</p></div><div class="bsec"><h4>Approach</h4><p class="body" style="max-width:60ch">{{ p.approach }}</p></div></div></div></section>
+<sc-if value="{{ hasBoard }}" hint-placeholder-val="{{ false }}"><section class="wrap" style="padding-bottom:clamp(56px,8vw,110px)"><div class="lbl" style="margin-bottom:8px">{{ boardLabel }}</div><p class="body" style="max-width:52ch;margin:0 0 32px;color:#4a463f">{{ p.boardNote }}</p><div style="display:flex;flex-direction:column;gap:clamp(20px,3vw,40px);align-items:center"><sc-for list="{{ boardList }}" as="b" hint-placeholder-count="1"><div style="max-width:{{ boardWidth }};width:100%;border:1px solid #ddd5c6;background:#fff"><img class="js-board" alt="{{ b.label }}" style="width:100%;height:auto;display:block" /></div></sc-for></div></section></sc-if>
+<sc-if value="{{ hasTechnical }}" hint-placeholder-val="{{ false }}"><section class="tech"><div class="wrap" style="padding-top:clamp(48px,7vw,90px);padding-bottom:clamp(48px,7vw,90px)"><div class="lbl" style="color:#8a8278;margin-bottom:8px">Technical Drawings</div><p class="body" style="max-width:52ch;margin:0 0 32px;color:#4a463f">{{ techNote }}</p><div class="techgrid"><sc-for list="{{ technical }}" as="t" hint-placeholder-count="2"><div class="techcard"><div class="techimg" style="position:relative"><img class="js-tech" alt="{{ t.label }}" style="width:100%;height:100%;object-fit:contain" /></div><div class="techcap"><span class="techname">{{ t.label }}</span><span class="techfig">{{ t.fig }}</span></div></div></sc-for></div></div></section></sc-if>
+<section class="wrap" style="padding-bottom:clamp(56px,8vw,110px)"><div class="lbl" style="margin-bottom:26px">Renders</div><div class="gal"><sc-for list="{{ gallery }}" as="g" hint-placeholder-count="4"><div class="ph {{ g.cls }}" style="position:relative;padding:0"><img class="js-gal" alt="{{ g.label }}" style="width:100%;height:100%;object-fit:cover;display:block" /><sc-if value="{{ g.noImg }}" hint-placeholder-val="{{ false }}"><span class="phl" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">{{ g.label }}</span></sc-if></div></sc-for></div></section>
+<sc-if value="{{ hasPhotos }}" hint-placeholder-val="{{ false }}"><section class="tech"><div class="wrap" style="padding-top:clamp(48px,7vw,90px);padding-bottom:clamp(48px,7vw,90px)"><div class="lbl" style="margin-bottom:8px">As Built</div><p class="serif" style="max-width:60ch;font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:#4a453c;margin:0 0 30px">{{ photoNote }}</p><div class="gal"><sc-for list="{{ photos }}" as="ph" hint-placeholder-count="2"><div class="ph gcine" style="position:relative;padding:0"><img class="js-photo" alt="{{ ph.label }}" style="width:100%;height:100%;object-fit:cover;display:block" /></div></sc-for></div></div></section></sc-if>
+<section style="background:#161310"><div class="wrap"><div class="pn"><a class="pncell" href="{{ p.prevHref }}"><div class="lbl" style="color:#9c7a4d">← Previous</div><div class="pntitle">{{ p.prevTitle }}</div></a><a class="pncell pnnext" href="{{ p.nextHref }}"><div class="lbl" style="color:#9c7a4d">Next →</div><div class="pntitle">{{ p.nextTitle }}</div></a></div></div></section>
+<footer style="background:#161310;border-top:1px solid #2a251e"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:30px;padding-bottom:30px"><a href="index.html" class="serif" style="font-size:20px;color:#ece6da;text-decoration:none">Ashish John</a><span class="lbl">Interior Designer &amp; Visualiser · © 2026</span></div></footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:900}}">
+const BLANK_IMG = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+class Component extends DCLogic {
+  componentDidMount() {
+    this.paintImages();
+    if (!window.__imgGuard) {
+      window.__imgGuard = true;
+      document.addEventListener('contextmenu', e => { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
+      document.addEventListener('dragstart', e => e.preventDefault());
+    }
+  }
+  componentDidUpdate() { this.paintImages(); }
+  setImg(img, src, fitBox) {
+    if (!img) return;
+    if (src) {
+      if (fitBox) {
+        const apply = () => {
+          const box = img.parentElement;
+          if (box && img.naturalWidth && !box.classList.contains('gcine')) box.style.aspectRatio = img.naturalWidth + ' / ' + img.naturalHeight;
+        };
+        img.complete && img.naturalWidth ? apply() : img.addEventListener('load', apply, { once: true });
+      }
+      img.src = src;
+      img.style.display = 'block';
+    } else {
+      img.src = BLANK_IMG;
+      img.style.display = 'none';
+    }
+  }
+  paintImages() {
+    this.setImg(document.querySelector('.js-hero'), this._hero);
+    document.querySelectorAll('.js-board').forEach((img, i) => {
+      this.setImg(img, this._boards && this._boards[i], false);
+    });
+    document.querySelectorAll('.js-tech').forEach((img, i) => {
+      this.setImg(img, this._technical && this._technical[i]);
+    });
+    document.querySelectorAll('.js-photo').forEach((img, i) => {
+      this.setImg(img, this._photos && this._photos[i]);
+    });
+    document.querySelectorAll('.js-gal').forEach((img, i) => {
+      this.setImg(img, this._gallery && this._gallery[i], true);
+    });
+  }
+  renderVals() {
+    const data = {
+      kerala: {
+        num: '01', title: 'Abode in Kerala', meta: 'Kerala, India — Private Residence',
+        lede: 'A house built around what it looks at: a river through one wall, a tree at its centre, and no clear line between inside and out.',
+        loc: 'Kerala, India', type: 'Private Residence', year: '2016\u20132019',
+        scope: 'Full-home — living, dining, courtyard', role: 'Visualisation & CAD drawing',
+        tools: 'AutoCAD · SketchUp · 3DS Max · V-Ray · Photoshop',
+        hero: 'assets/kerala-living-hero.png',
+        heroLabel: 'Living room \u2014 river view, evening',
+        techNote: 'The modular kitchen set: three wall elevations numbering every basket, drawer, shelf and appliance against its dimension, with matching counter plans for each run.',
+        technical: [
+          { code: 'E-A', label: 'Elevation \u2014 Side A', img: 'assets/kerala-cad-e-a.png' },
+          { code: 'E-B', label: 'Elevation \u2014 Side B', img: 'assets/kerala-cad-e-b.png' },
+          { code: 'E-C', label: 'Elevation \u2014 Side C', img: 'assets/kerala-cad-e-c.png' },
+          { code: 'P-A', label: 'Counter Plan \u2014 Side A', img: 'assets/kerala-cad-p-a.png' },
+          { code: 'P-B', label: 'Counter Plan \u2014 Side B', img: 'assets/kerala-cad-p-b.png' },
+          { code: 'P-C', label: 'Counter Plan \u2014 Side C', img: 'assets/kerala-cad-p-c.png' },
+          { code: 'CP', label: 'Courtyard \u2014 floor pattern plan', img: 'assets/kerala-courtyard-plan.png' }
+        ],
+        overview: 'This house is organised around what it looks at. The living room gives up an entire wall to the river and the trees beyond it, so the view is not a feature of the room but the room\u2019s reason for facing that way. At the centre of the plan a skylit courtyard holds a single tree in a stone planter, put there so that a growing thing sits at the heart of the house and every route through it passes something being cared for. The family asked for a home that felt substantial without announcing itself. The answer was to spend the generosity on openness and daylight rather than ornament: high ceilings, long sightlines, and rooms that borrow light and green from one another instead of competing for attention.',
+        material: 'The house runs on polished hardwood, close-laid teak strip flooring through the living rooms and bedrooms, against plain cream plaster, with dark-stained teak louvred shutters and a recessed teak ceiling raft over the seating. The kitchen changes register deliberately: teak-veneer fronts alternating with white lacquer, white solid-surface counters, a white tile backsplash and beige marble underfoot, so the working room reads cooler and brighter than the rooms around it. Olive and moss upholstery, ochre and green patterned rugs and small brass pieces carry the colour. In the courtyard the language turns rougher: split sandstone cladding, a black stone planter, and a floor pieced from timber boards and charcoal stone under a steel-gridded skylight.',
+        approach: 'The client asked for a home that stayed close to nature, and took that to mean the inside should not feel like a different place from the outside. So the work started with the two thresholds where that promise is either kept or broken: the living wall facing the river, and the courtyard at the centre of the plan. The courtyard was drawn out fully, a floor pattern piecing timber boards into charcoal stone dimensioned to the centimetre, because the point where the ground changes material is where a room stops being an interior. Sandstone was carried up its walls and a tree planted in the middle of it, so what the house looks at from within is the same substance it is built of. The kitchen was documented the same way, elevation by elevation, every basket and drawer numbered against its dimension. Only then was the house modelled and lit: high daylight through the middle of the day, hard skylight shadows travelling the courtyard wall, warm lamp pools after dark, and framed from where a person would actually stand: in a doorway, at the end of a reading sofa. The client was never shown a product shot, only an ordinary evening in a house that did not yet exist. It has since been built, and the photographs further down this page sit beside the drawings they came from.',
+        galAspect: '16/9',
+        photoNote: 'Photographs of the completed home, with the drawn set carried through to teak fronts, white counters and the river-facing living room.',
+        photos: [
+          { label: 'Living room \u2014 river window', img: 'assets/kerala-living-built.jpg' },
+          { label: 'Kitchen \u2014 sink & hob runs', img: 'assets/kerala-kitchen-built.jpg' },
+          { label: 'Kitchen \u2014 appliance wall & fridge', img: 'assets/kerala-kitchen-photo.png' },
+          { label: 'Courtyard \u2014 stone wall & planter, as built', img: 'assets/kerala-courtyard-photo.png' }
+        ],
+        galWide: [4],
+        galleryImages: ['assets/kerala-kitchen-evening.png', 'assets/kerala-bedroom.png', 'assets/kerala-living-reading.jpg', 'assets/kerala-kitchen-walnut.jpg', 'assets/kerala-courtyard-render.png'],
+        gallery: ['Kitchen \u2014 evening', 'Bedroom \u2014 lamplight', 'Living room \u2014 reading corner', 'Kitchen \u2014 walnut scheme', 'Courtyard \u2014 skylight & stone wall']
+      },
+      artdeco: {
+        num: '02', title: 'Art Deco in Action', meta: 'Asmodevos — Bespoke Suit Shop',
+        lede: 'A room built for the moment a man sees himself in a suit that fits.',
+        type: 'Bespoke Suit Shop \u2014 Asmodevos', year: '2022',
+        scope: 'Plan, elevations, millwork detail & final renders', role: 'Drafting, design development & visualisation',
+        techNote: 'The AutoCAD set behind the store: a dimensioned floor plan, three wall elevations, a dedicated millwork sheet for the cash rap, and a reflected ceiling plan setting every chandelier, downlight, track run and LED strip.',
+        technical: [
+          { code: 'PLAN', label: 'Retail Floor Plan', img: 'assets/deco-cad-plan.png' },
+          { code: 'E1', label: 'Counter & Display Wall', img: 'assets/deco-cad-e1.png' },
+          { code: 'E2', label: 'Shelving Wall — LED Detail', img: 'assets/deco-cad-e2.png' },
+          { code: 'E3', label: 'Suiting Wall & Lounge', img: 'assets/deco-cad-e3.png' },
+          { code: 'MW-1', label: 'Millwork 1 — Cash Rap', img: 'assets/deco-cad-millwork.png' },
+          { code: 'RCP', label: 'Reflected Ceiling & Lighting', img: 'assets/deco-cad-rcp.png' }
+        ],
+        tools: 'AutoCAD \u00b7 3DS Max \u00b7 V-Ray \u00b7 SketchUp \u00b7 Photoshop',
+        hero: 'assets/deco-storefront.png',
+        heroLabel: 'Asmodevos storefront',
+        overview: 'A bespoke suit is not bought in a single visit. Consultation, working model, basted fitting, then adjustments: the customer comes back four or five times before he owns anything. That decides what the store has to be. Selling from the pavement is the easy half; the harder half is being a place a man will stand still in, half-dressed, while someone marks chalk across his shoulder. So Asmodevos was planned as a sequence rather than a shop floor. Frontage, display, cash rap, and at the back a seated lounge where the fittings happen and the waiting is comfortable. Art Deco suits the brief because it is the last style that took male vanity completely seriously, and it is played straight here: stepped geometry, brass, lacquered black, held without deviation from the shopfront sign to the last shelf bracket.',
+        material: 'Every finish was named before anything was rendered. Lemurian Blue granite and Astana Chalcedony LVT set the floor, Callisto Ply the joinery carcass, Natural Clay ARR05 the walls behind it, with the brass grilles cut to a Luxfer Lattice Petite stencil. Above that, walnut inlaid with brass and teal banding, brass mesh infill, a faceted charcoal counter wall, and teal and gold pattern behind the lounge. Underfoot, timber gives way to carpet exactly where the room stops selling and starts asking the customer to sit down: a change of material doing the work a sign would otherwise have to do. The light was chosen as carefully as cloth. Lyra track over the merchandise, rock crystal above the cash rap, Sciolari glass over the seating, and a single Deco sconce outside, meant to be read from across the street after dark.',
+        approach: 'One motif carries the whole store. The stepped ziggurat cut into the cash rap returns as the signage, the shelving frames and the display joinery, so the eye keeps meeting the same idea at a different size. All of it was settled on paper before anything was modelled: a 29\u2032 \u00d7 28\u2032 plan fixing circulation and merchandising, every wall drawn in elevation with shelf and fixture heights set against real garment lengths, the counter given its own millwork sheet down to the stone inlay and the strip lighting, and a reflected ceiling plan placing each chandelier and track run. By the time the store entered 3D there was nothing left to guess, which is why these renders read as a quotation rather than a mood.',
+        galAspect: '16/9',
+        board: 'assets/deco-selectionboard.png',
+        boardNote: 'Every finish fixed before the first render: tiger-motif and arch-pattern wallpapers, Benjamin Moore Muslin OC-12, oak and blue-grey flooring, labradorite stone, brass fixtures and the ziggurat sconce, with the ASMODEVOS signage set in the same stepped geometry.',
+        galleryImages: ['assets/deco-counter.png', 'assets/deco-featurewall.png', 'assets/deco-suiting.png', 'assets/deco-lounge.png'],
+        gallery: ['Cash counter & signage wall', 'Feature wall — lounge', 'Suiting wall & display', 'Window lounge & footwear']
+      },
+      office: {
+        num: '03', title: 'The Office', meta: 'Commercial — Small Office Floor',
+        lede: 'A working floor, rebuilt in full: reception, bullpen, break room and the manager\u2019s corner.',
+        type: 'Small Office Floor', year: '2022',
+        scope: 'Space planning & visualisation', role: 'Modelling & visualisation',
+        tools: 'AutoCAD \u00b7 SketchUp \u00b7 3DS Max \u00b7 D5 Render \u00b7 Photoshop',
+        hero: 'assets/office-plan-landscape.png',
+        heroLabel: 'Furnished floor plan',
+        techNote: '',
+        technical: [],
+        overview: 'People give more of their waking lives to a floor like this than to their own living rooms, which is reason enough to take it seriously. The whole floor was built end to end, from the reception a visitor meets first to the bullpen behind it, the conference room, the break room, and the manager\u2019s office in the far corner. It was studied as one sequence rather than five rooms, because the sequence is what an employee actually experiences: what the door reveals, how much daylight the bullpen borrows from reception, whether the break room reads as a reward or an afterthought.',
+        material: 'The palette is ordinary on purpose. Patterned carpet tile, butter-yellow and cream walls, cherry-stained millwork, grey system furniture, black task chairs. Budgets for a floor this size are real, and pretending otherwise helps nobody. The argument the project makes is that ordinary specification, handled with care, is already enough: warmth comes from the timber and from lighting the room at lamp height rather than flooding the ceiling.',
+        approach: 'The plan came first, resolved as a furnished overhead until the desking, circulation and door swings all worked. Each room was then built and lit for one consistent late afternoon, so a single hour of the day runs through every view instead of each render inventing its own weather. Every frame sits at standing eye height, taken from the point the room is genuinely entered. The test was never whether it photographs well, but whether somebody who works there would recognise the place.',
+        galAspect: '16/9',
+        galWide: [4],
+        galleryImages: ['assets/office-reception.png', 'assets/office-bullpen.png', 'assets/office-exec.png', 'assets/office-breakroom.png', 'assets/office-section.png'],
+        gallery: ['Reception & signage wall', 'Open bullpen & desking', 'Private office \u2014 evening', 'Break room & pantry', 'Long section \u2014 reception to washroom']
+      },
+      prayer: {
+        num: '05', title: 'A Prayer', meta: 'Place of Worship — Sanctuary Doors & Altar Wall',
+        lede: 'A sanctuary entry and altar wall, drawn from one idea: a sustaining light at the centre, radiating outward.',
+        type: 'Sanctuary Doors & Altar Wall', year: '2026',
+        scope: 'Concept, symbolism & visualisation', role: 'Concept & visualisation',
+        tools: 'AutoCAD \u00b7 3DS Max \u00b7 V-Ray \u00b7 Photoshop',
+        hero: 'assets/prayer-doors-hero.png',
+        heroAspect: '4/3',
+        heroLabel: 'Sanctuary entrance doors',
+        overview: 'A sanctuary is entered before it is understood, and the threshold sets the terms. Two connected commissions, the entrance doors and the altar wall they open onto, were drawn from a single image: a sustaining light at the centre of the room, radiating outward. That one idea is then said in the vocabulary the congregation already knows: the cross, the rays, the Sacred Heart, the dove, the Chi-Rho, so that arriving and worshipping are not two experiences but one sentence with two halves.',
+        material: 'The threshold is wood and nothing else: solid teak, hand-carved relief, veneer panels, a satin clear finish, and deliberately no metal anywhere in the door family, so the hand meets only one material. At the altar the wall is set with translucent glass mosaic in red, amber and gold with a single green accent, laid against warm timber cladding around a solid wood cross, so that the light appears to originate inside the wall rather than fall on it. The doors are what you touch; the altar is what you look at. Both are lit from within the same idea.',
+        approach: 'Nothing symbolic was left to instinct. Each element was developed on its own board: concept inspiration, symbol translation, form development, material palette, final proposal, so the meaning of every carved line could be defended to the people who will pray in front of it. The doors were then resolved as a family rather than as one hero object: a double-leaf main entrance carrying the radiating cross, flanked by side doors bearing the Chi-Rho and the dove, all sharing a single carving language.',
+        boardLabel: 'Design Development',
+        boardNote: 'Two boards trace the work from concept inspiration through symbol translation, form development and material palette to the final proposal.',
+        boards: [
+          { label: 'Sanctuary door design development', img: 'assets/prayer-board-door.png' },
+          { label: 'Altar wall design development', img: 'assets/prayer-board-altar.png' }
+        ],
+        galleryImages: ['assets/prayer-altar-front.png', 'assets/prayer-altar-angle.png'],
+        gallery: ['Altar wall \u2014 elevation view', 'Altar wall \u2014 from the nave']
+      },
+      onyx: {
+        num: '06', title: 'Restaurant Onyx', meta: 'Hospitality \u2014 Restaurant & Bar',
+        lede: 'A restaurant and bar in green onyx, brass and dark timber, lit so the stone itself does the work.',
+        type: 'Restaurant & Bar', year: '2023',
+        scope: 'Concept, material development & visualisation', role: 'Modelling, lighting & visualisation',
+        tools: 'AutoCAD \u00b7 SketchUp \u00b7 Chief Architect \u00b7 Photoshop',
+        hero: 'assets/onyx-dining.png',
+        heroAspect: '6/5',
+        techNote: 'The dimensioned set behind the renders: the floor plan with kitchen and washrooms resolved, and the bar wall drawn twice: once as seen, once fully dimensioned through the under-counter equipment.',
+        technical: [
+          { code: 'PLAN', label: 'Floor Plan \u2014 Dimensioned', img: 'assets/onyx-cad-plan.png' },
+          { code: 'ELEV', label: 'Bar Elevation', img: 'assets/onyx-cad-bar-elev.png' },
+          { code: 'ELEV-S', label: 'Bar Side Elevation', img: 'assets/onyx-cad-bar-side.png' }
+        ],
+        overview: 'A restaurant has to work twice: once at noon for a half-empty room, and once at ten at night when it is full and everyone is looking their best. Onyx occupies a single floor with a city outlook: an open kitchen counter facing the dining room, banquettes along the glazing, and a long bar backed by a wall of lit stone. The two rooms are built from the same material language but tuned to feel like different hours: the dining room settles, the bar performs.',
+        material: 'Green onyx, backlit, against fluted walnut, brushed brass, cream quartz and deep emerald velvet. The floor changes underfoot from hexagonal stone mosaic at the bar to dark timber boards in the dining room, marking the shift from standing to sitting without a threshold or a step. A fan-patterned wallcovering behind the signage carries the Deco note just far enough to be noticed once.',
+        approach: 'The onyx wall was resolved before anything else: panel layout, direction of veining, the exact light level behind it, because it is the only source of drama in the room and everything else is measured against it. Push it too far and the stone becomes a lightbox; hold it back and the brass has nothing to answer. Views were then rendered at dusk and again in flat daylight, with guests and without, because a room that only survives one lighting condition and a full reservation book is not designed, it is staged.',
+        board: 'assets/onyx-selection-board.png',
+        boardLabel: 'Selection Board',
+        boardNote: 'Every finish and furniture piece fixed before the first render: backlit green onyx, fluted and plank walnut, hexagonal stone mosaic, fan-pattern wallcovering, white and black marble tops, navy and emerald velvet, brass bases and amber glass pendants.',
+        galWide: [4],
+        galleryImages: ['assets/onyx-bar-evening.png', 'assets/onyx-bar-quiet.png', 'assets/onyx-bar-daylight.png', 'assets/onyx-bar-empty.png', 'assets/onyx-plan.png'],
+        gallery: ['Bar \u2014 evening service', 'Bar \u2014 onyx back wall at dusk', 'Bar \u2014 daylight', 'Bar \u2014 unoccupied, daylight', 'Furnished plan \u2014 overhead']
+      },
+      boards: {
+        num: '07', title: 'Concept Boards', meta: 'Process — Material & Mood',
+        lede: 'Before the render, the instinct: materials gathered until a space starts to have an opinion of its own.',
+        loc: 'Process', type: 'Material & Mood', year: 'Ongoing',
+        scope: 'Boards, palettes & references', role: 'Concept & art direction',
+        tools: 'AutoCAD · Photoshop · SketchUp',
+        heroLabel: 'Hero — material & mood board · drop 16:9',
+        overview: 'A look behind the visualisations: the concept boards where each project\u2019s character is found. These set the palette, mood and material logic that every render then has to honour.',
+        material: 'Boards pair physical reference in stone, timber and textile with tonal studies and lighting intent, so the direction is agreed in feeling before it is committed in 3D.',
+        approach: 'Each board is assembled in Photoshop over quick SketchUp massing, keeping the conversation about atmosphere and taste rather than detail, early enough to change cheaply.',
+        gallery: ['Material board — warm', 'Palette & tones', 'Reference study', 'Mood direction']
+      },
+      bathroom: {
+        num: '04', title: 'Bathroom Study', meta: 'Residential Bathroom \u2014 Drawing Set & Visualisation',
+        lede: 'A room taken the whole way, from a dimensioned plan to the tile it is finally made of.',
+        type: 'Compact Bathroom', year: '2022',
+        scope: 'Plan, 4 elevations, electrical layout, final renders', role: 'Drafting, material development & visualisation',
+        tools: 'AutoCAD \u00b7 3DS Max \u00b7 Photoshop',
+        hero: 'assets/bathroom-hero.png',
+        board: 'assets/bathroom-materialboard.png',
+        techNote: 'The full AutoCAD set the renders were built from: plan, four wall elevations and the electrical layout, dimensioned throughout.',
+        boardNote: 'Warmth, contrast, refined simplicity: beige stone against charcoal floor, burgundy accent tile and unlacquered brass, specified before a single view was rendered.',
+        heroLabel: 'Bathroom plan & elevations \u2014 hero \u00b7 drop 16:9',
+        galleryImages: ['assets/bathroom-plan.png', 'assets/bathroom-elevation.png', 'assets/bathroom-vanity.png', 'assets/bathroom-mood.png'],
+        technical: [
+          { code: 'PLAN', label: 'Floor Plan', img: 'assets/cad-plan.png' },
+          { code: 'E1', label: 'Vanity Wall', img: 'assets/cad-e1.png' },
+          { code: 'E2', label: 'Shower Wall', img: 'assets/cad-e2.png' },
+          { code: 'E3', label: 'Tub & WC Wall', img: 'assets/cad-e3.png' },
+          { code: 'E4', label: 'Entry Wall', img: 'assets/cad-e4.png' },
+          { code: 'ELEC', label: 'Electrical Plan', img: 'assets/cad-electrical.png' }
+        ],
+        overview: 'The smallest room in a house is the one where every mistake is visible from the door. This one was taken the whole way: plan, four interior elevations and an electrical layout, dimensioned until every fixture, tiling line and clearance was fixed, and only then rendered, to find out what that geometry actually feels like once it is wearing a material. Documentation proves a room will fit. Visualisation is the only way to find out whether anyone wants to stand in it.',
+        material: 'Deep oxblood glazed tile in running bond, aged brass fittings, a walnut vanity and honed black stone underfoot, all held against warm plaster. Conventional advice says a small bathroom should be pale. The renders exist to test the opposite case honestly, asking how far the oxblood can be pushed before the walls start closing in and how much brass is needed to warm it back out, because a dark small room, judged correctly, reads as intimate rather than cramped.',
+        approach: 'Plan first: fixtures and clearances resolved in AutoCAD, then every wall drawn in elevation with the tiling grid set against real fixture heights, electrical layered on last so switches and lights land where a hand and an eye expect them. The room moved into 3D only once the set had closed. The renders therefore inherit the drawing\u2019s dimensions instead of inventing flattering ones, which is the difference between an image that sells a room and an image a contractor can build from.',
+        gallery: ['Plan view \u2014 rendered', 'Shower wall \u2014 rendered', 'Vanity & shower', 'Occupied \u2014 scale & atmosphere']
+      }
+    };
+    const order = ['kerala', 'artdeco', 'office', 'bathroom', 'prayer', 'onyx'];
+    let slug = 'kerala';
+    try { slug = new URLSearchParams(window.location.search).get('p') || 'kerala'; } catch (e) {}
+    if (!data[slug]) slug = 'kerala';
+    const p = data[slug];
+    const i = order.indexOf(slug);
+    const prev = order[(i - 1 + order.length) % order.length];
+    const next = order[(i + 1) % order.length];
+    const facts = [
+      p.loc ? { k: 'Location', v: p.loc } : null,
+      { k: 'Type', v: p.type },
+      { k: 'Scope', v: p.scope },
+      { k: 'Role', v: p.role },
+      { k: 'Software', v: p.tools },
+      { k: 'Year', v: p.year }
+    ].filter(Boolean);
+    const gallery = p.gallery.map((label, idx) => {
+      const img = p.galleryImages && p.galleryImages[idx];
+      const wide = (p.galWide && p.galWide.indexOf(idx) !== -1) || (idx === 3 && !p.galleryImages);
+      return { label, cls: wide ? 'g-wide' : (p.galAspect === '16/9' ? 'gcine' : 'gnorm'), noImg: !img };
+    });
+    const technical = (p.technical || []).map(t => ({ label: t.label, fig: t.code }));
+    this._hero = p.hero || null;
+    this._board = p.board || null;
+    this._gallery = p.gallery.map((_, idx) => p.galleryImages && p.galleryImages[idx]);
+    this._technical = (p.technical || []).map(t => t.img);
+    this._photos = (p.photos || []).map(t => t.img);
+    const boardList = p.boards ? p.boards.map(b => ({ label: b.label })) : (p.board ? [{ label: p.title + ' material board' }] : []);
+    this._boards = p.boards ? p.boards.map(b => b.img) : (p.board ? [p.board] : []);
+    const photos = (p.photos || []).map(t => ({ label: t.label }));
+    return {
+      facts, gallery, technical, photos, hasPhotos: photos.length > 0,
+      photoNote: p.photoNote || '',
+      hasTechnical: technical.length > 0, hasBoard: boardList.length > 0, heroAspect: p.heroAspect || '16/9',
+      boardList, boardLabel: p.boardLabel || 'Material Board',
+      boardWidth: p.boards ? '1180px' : '820px',
+      techNote: p.techNote || 'The AutoCAD set the renders were built from, dimensioned throughout.',
+      p: Object.assign({}, p, {
+        noHero: !p.hero,
+        prevHref: '?p=' + prev, prevTitle: data[prev].title,
+        nextHref: '?p=' + next, nextTitle: data[next].title
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashish John — Interior Designer &amp; Visualiser</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f2ec;color:#1a1a1a;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:#9c7a4d;color:#f5f2ec}
+img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;pointer-events:none}
+a{color:#9c7a4d;text-decoration:none}
+a:hover{color:#1a1a1a}
+.dark a:hover,footer a:hover{color:#f2ece0}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.mono{font-family:'Space Mono',monospace}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(24px,5vw,72px)}
+.mut{color:#8a8278}
+.bronze{color:#9c7a4d}
+.body{color:#2c2820;font-size:clamp(16px,1.15vw,18px);line-height:1.62;font-weight:400}
+.lbl{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a8278}
+.rule{height:1px;background:#ddd5c6;border:0;margin:0}
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid #e3dccd}
+.navin{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:23px;letter-spacing:.01em;color:#1a1a1a;text-decoration:none;font-weight:500}
+.navlinks{display:flex;gap:34px;align-items:center}
+.navlinks a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5a554c;text-decoration:none;transition:color .25s}
+.navlinks a:hover{color:#9c7a4d}
+.sec{padding-top:clamp(72px,11vw,150px);padding-bottom:clamp(72px,11vw,150px);scroll-margin-top:74px}
+.ph{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:repeating-linear-gradient(135deg,#ece6da 0 13px,#e7dfd1 13px 26px);border:1px solid #dcd4c4}
+.phl{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7a7264;background:rgba(245,242,236,.78);border:1px solid #d3cab8;padding:9px 13px;text-align:center;line-height:1.5}
+.ph-dark{background:repeating-linear-gradient(135deg,#211d18 0 13px,#1a1712 13px 26px);border-color:#2f2a22}
+.ph-dark .phl{color:#b3a98f;background:rgba(20,18,14,.55);border-color:#34302700;border:1px solid #3a3428}
+.proj{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(34px,5vw,76px);align-items:center}
+.pnum{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,96px);line-height:1;color:#cfc6b2;font-weight:300}
+.ptitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,4.6vw,62px);line-height:1.02;letter-spacing:-.01em;margin:14px 0 18px}
+.pdesc{max-width:46ch}
+.ptools{margin-top:26px;padding-top:16px;border-top:1px solid #ddd5c6}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,60px)}
+.pill-t{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,2.6vw,34px);font-weight:400;margin:18px 0 12px;letter-spacing:-.01em}
+.dark{background:#161310;color:#ece6da}
+.dark .ptitle{color:#f2ece0}
+.dark .pdesc{color:#c3bbab}
+.dark .ptools{border-top-color:#322d24}
+.dark .pnum{color:#3a342a}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(40px,6vw,90px)}
+.skill{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:22px 0;border-top:1px solid #ddd5c6}
+.skill-n{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,28px);font-weight:400}
+.cta{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,6.5vw,92px);line-height:1.04;letter-spacing:-.015em;margin:0}
+.maillink{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,40px);color:#1a1a1a;text-decoration:none;border-bottom:1px solid #c9bfa9;padding-bottom:3px;transition:border-color .25s,color .25s}
+.maillink:hover{color:#9c7a4d;border-color:#9c7a4d}
+.boards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.projlink{text-decoration:none;color:inherit;cursor:pointer}
+.projlink .ptitle{transition:color .3s}
+.projlink:hover .ptitle{color:#9c7a4d}
+.projlink .ph{transition:border-color .3s}
+.projlink:hover .ph{border-color:#bfa987}
+.viewcue{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9c7a4d}
+.viewcue i{font-style:normal;transition:transform .28s cubic-bezier(.16,1,.3,1)}
+.projlink:hover .viewcue i{transform:translateX(6px)}
+@media(max-width:860px){.proj{grid-template-columns:1fr;gap:32px}.pillars{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.navlinks{gap:20px}.boards{grid-template-columns:1fr}.order-img{order:-1}}
+</style>
+</helmet>
+<div class="nav"><div class="wrap navin"><a href="#top" class="brand">Ashish John</a><div class="navlinks"><a href="#work">Work</a><a href="#studio">Studio</a><a href="#skills">Capabilities</a><a href="#contact">Contact</a></div></div></div>
+<div id="top"></div>
+<header class="wrap" style="padding-top:clamp(70px,12vw,150px);padding-bottom:clamp(40px,6vw,80px)"><div class="lbl" data-reveal>Interior Designer &amp; Visualiser — Selected Work, 2016–2026</div><h1 class="serif" data-reveal style="font-weight:300;font-size:clamp(40px,8vw,116px);line-height:1.0;letter-spacing:-.02em;margin:26px 0 0;max-width:16ch">Rooms that are felt before they are entered.</h1><p class="body" data-reveal style="max-width:54ch;margin:34px 0 0">I translate luxury residential concepts into material, light and mood, with visualisations built to make a space believable, desirable, and quietly inevitable long before it is built.</p></header>
+<section id="fig00wrap" style="position:relative;height:300vh;padding-bottom:clamp(40px,6vw,80px)"><div style="position:sticky;top:0;height:100vh;overflow:hidden;background:#1a1712"><video id="fig00vid" src="assets/fig00-scroll.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none"></video></div></section>
+
+<section id="work" class="sec wrap"><div class="lbl" data-reveal>The Work — A Design Journey</div><p class="serif" data-reveal style="font-weight:300;font-size:clamp(24px,3vw,40px);line-height:1.25;letter-spacing:-.01em;max-width:24ch;margin:18px 0 0">A small body of work, each room chosen for the way it lingers.</p></section>
+
+<section class="sec wrap" style="padding-top:0"><a class="proj projlink" data-reveal href="project.html?p=kerala"><div><div class="pnum">01</div><h3 class="ptitle">Abode in Kerala</h3><div class="lbl">Kerala, India — Private Residence</div><p class="body pdesc" style="margin-top:18px">A house that keeps something green in view from almost anywhere inside it. A tree grows at the centre of the plan, under an open skylight; the main rooms give up their walls to the landscape outside. Teak, cream plaster and stone, chosen to sit quietly against all of it.</p><div class="ptools lbl">AutoCAD · SketchUp · 3DS Max · V-Ray · Photoshop</div><div class="viewcue">View Project <i>→</i></div></div><div class="ph" style="aspect-ratio:4/3;padding:0"><img src="assets/kerala-living-hero.png" alt="Living room — river view, evening" style="width:100%;height:100%;object-fit:cover;display:block" /></div></a></section>
+
+<section class="sec wrap" style="padding-top:0"><a class="proj projlink" data-reveal href="project.html?p=artdeco"><div class="ph order-img" style="aspect-ratio:4/3;padding:0"><img src="assets/deco-storefront.png" alt="Asmodevos storefront" style="width:100%;height:100%;object-fit:cover;display:block" /></div><div><div class="pnum">02</div><h3 class="ptitle">Art Deco in Action</h3><div class="lbl">Asmodevos — Bespoke Suit Shop</div><p class="body pdesc" style="margin-top:18px">A tailor’s shop has to hold a man’s attention while he stands still to be measured. Stepped walnut, brass and lacquered black, carried from the street frontage through to the fitting lounge at the back.</p><div class="ptools lbl">AutoCAD · 3DS Max · V-Ray · SketchUp · Photoshop</div><div class="viewcue">View Project <i>→</i></div></div></a></section>
+
+<section class="sec wrap"><a class="proj projlink" data-reveal href="project.html?p=office"><div><div class="pnum">03</div><h3 class="ptitle">The Office</h3><div class="lbl">Commercial — Small Office Floor</div><p class="body pdesc" style="margin-top:18px">An ordinary working floor taken seriously. Reception, bullpen, break room and the manager’s corner, all built end to end and lit by one shared late afternoon.</p><div class="ptools lbl">AutoCAD · SketchUp · 3DS Max · D5 Render · Photoshop</div><div class="viewcue">View Project <i>→</i></div></div><div class="ph" style="aspect-ratio:4/3;padding:0"><img src="assets/office-reception.png" alt="Reception &amp; signage wall" style="width:100%;height:100%;object-fit:cover;display:block" /></div></a></section>
+
+<section class="sec wrap" style="padding-top:0"><a class="proj projlink" data-reveal href="project.html?p=bathroom"><div><div class="pnum">04</div><h3 class="ptitle">Bathroom Study</h3><div class="lbl">Residential Bathroom — Drawing Set &amp; Visualisation</div><p class="body pdesc" style="margin-top:18px">A small room taken the whole way: a dimensioned plan and four elevations, then rendered out in oxblood tile, aged brass and walnut to test how much colour a compact space can carry.</p><div class="ptools lbl">AutoCAD · 3DS Max · Photoshop</div><div class="viewcue">View Project <i>→</i></div></div><div class="ph" style="aspect-ratio:4/3;padding:0"><img src="assets/bathroom-hero.png" alt="Bathroom study" style="width:100%;height:100%;object-fit:cover;display:block" /></div></a></section>
+
+<section class="sec wrap" style="padding-top:0"><a class="projlink" data-reveal href="project.html?p=prayer" style="display:block"><div style="text-align:center;max-width:760px;margin:0 auto"><div class="pnum" style="color:#cfc6b2">05</div><h3 class="ptitle" style="margin:10px 0 16px">A Prayer</h3><div class="lbl">Place of Worship — Sanctuary Doors &amp; Altar Wall</div></div><div class="ph" style="aspect-ratio:4/3;max-width:900px;margin:34px auto 26px;padding:0"><img src="assets/prayer-doors-hero.png" alt="Sanctuary entrance doors" style="width:100%;height:100%;object-fit:cover;display:block" /></div><p class="body" style="text-align:center;max-width:58ch;margin:0 auto;color:#4a463f">A sanctuary entry and altar wall drawn from one idea: a sustaining light at the centre, radiating outward through cross, heart and dove.</p><div style="text-align:center;margin-top:20px"><span class="viewcue">View Project <i>→</i></span></div></a></section>
+
+<section class="sec wrap" style="padding-top:0"><a class="proj projlink" data-reveal href="project.html?p=onyx"><div><div class="pnum">06</div><h3 class="ptitle">Restaurant Onyx</h3><div class="lbl">Hospitality — Restaurant &amp; Bar</div><p class="body pdesc" style="margin-top:18px">A restaurant and bar in green onyx, brass and dark timber. The backlit stone wall was resolved first, from panel layout to veining and light level, with everything else set against it.</p><div class="ptools lbl">AutoCAD · SketchUp · Chief Architect · Photoshop</div><div class="viewcue">View Project <i>→</i></div></div><div class="ph" style="aspect-ratio:4/3;padding:0"><img src="assets/onyx-bar-evening.png" alt="Restaurant Onyx — bar at dusk" style="width:100%;height:100%;object-fit:cover;display:block" /></div></a></section>
+
+
+
+
+<section id="studio" class="sec" style="background:#ece7dd"><div class="wrap"><div class="lbl" data-reveal>The Studio — How I Work</div><div class="pillars" style="margin-top:46px"><div data-reveal><div class="lbl bronze">01</div><h4 class="pill-t">Material &amp; Mood</h4><p class="body" style="color:#4a463f">I begin with the feeling of a surface, how stone, timber and textile catch light, and build the atmosphere outward from there.</p></div><div data-reveal><div class="lbl bronze">02</div><h4 class="pill-t">Practical &amp; Usable</h4><p class="body" style="color:#4a463f">Beauty that doesn't work isn't luxury. Every visualisation is grounded in real proportion, circulation and how the space is lived in.</p></div><div data-reveal><div class="lbl bronze">03</div><h4 class="pill-t">A Luxury of Taste</h4><p class="body" style="color:#4a463f">Restraint over excess. The aim is a room that feels considered and rare, refined enough to convince the most discerning client.</p></div></div><hr class="rule" style="margin:clamp(54px,7vw,90px) 0"><div class="proj" data-reveal style="align-items:start"><div><h3 class="ptitle" style="margin-top:0">About Ashish</h3><p class="body" style="max-width:50ch;color:#3a362e">Interior designer and visualiser specialising in high-end residential spaces. I work alongside design teams from first concept to final render, developing ideas, resolving detail, and producing the imagery that lets a client see, and trust, the space ahead of time.</p><p class="body" style="max-width:50ch;color:#3a362e;margin-top:16px">Trained in interior design, with a working command of the full visualisation pipeline, from spatial planning to photoreal lighting and final post.</p></div><div class="ph" style="aspect-ratio:4/5;padding:0"><img src="assets/portrait.jpg" alt="Ashish John" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block" /></div></div></div></section>
+
+<section id="skills" class="sec wrap"><div class="lbl" data-reveal>Capabilities — Software &amp; Craft</div><div class="skills" data-reveal style="margin-top:42px"><div class="skill"><span class="skill-n serif">AutoCAD</span><span class="lbl">Drafting &amp; plans</span></div><div class="skill"><span class="skill-n serif">SketchUp</span><span class="lbl">Concept modelling</span></div><div class="skill"><span class="skill-n serif">Revit</span><span class="lbl">BIM &amp; detail</span></div><div class="skill"><span class="skill-n serif">3DS Max · V-Ray</span><span class="lbl">Photoreal render</span></div><div class="skill"><span class="skill-n serif">D5 Render</span><span class="lbl">Real-time &amp; walkthrough</span></div><div class="skill"><span class="skill-n serif">Chief Architect</span><span class="lbl">Plans &amp; interiors</span></div><div class="skill"><span class="skill-n serif">Design 20/20</span><span class="lbl">Millwork &amp; casework</span></div><div class="skill"><span class="skill-n serif">Adobe Photoshop</span><span class="lbl">Post &amp; composition</span></div></div></section>
+
+<section id="contact" class="dark"><div class="sec wrap"><div class="lbl" data-reveal style="color:#9c7a4d">Contact</div><h2 class="cta" data-reveal style="margin-top:24px;max-width:18ch">Let's build something worth remembering.</h2><div data-reveal style="display:flex;flex-wrap:wrap;gap:40px 80px;align-items:flex-end;margin-top:clamp(40px,6vw,72px)"><div><div class="lbl" style="margin-bottom:14px">Email</div><a class="maillink" href="mailto:ashishjohn1020@gmail.com" style="color:#ece6da;border-color:#4a4338">ashishjohn1020@gmail.com</a></div><div><div class="lbl" style="margin-bottom:14px">Phone</div><a class="maillink" href="tel:+13439874009" style="color:#ece6da;border-color:#4a4338">343 987 4009</a></div><div><div class="lbl" style="margin-bottom:10px">Availability</div><div class="body" style="color:#c3bbab">Open to studio &amp; freelance roles · Visualisation &amp; design development</div></div></div></div></section>
+
+<footer class="dark" style="border-top:1px solid #2a251e"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:30px;padding-bottom:30px"><span class="serif" style="font-size:20px;color:#ece6da">Ashish John</span><span class="lbl">Interior Designer &amp; Visualiser · © 2026</span></div></footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._scrub = () => {
+      const v = document.getElementById('fig00vid');
+      if (!v || !v.duration || !isFinite(v.duration)) return;
+      const w = document.getElementById('fig00wrap');
+      if (!w) return;
+      const r = w.getBoundingClientRect();
+      const span = r.height - window.innerHeight;
+      let p = span > 0 ? -r.top / span : 0;
+      p = Math.max(0, Math.min(1, p));
+      const t = p * (v.duration - 0.05);
+      if (Math.abs(v.currentTime - t) > 0.01) v.currentTime = t;
+    };
+    this._tick = () => {
+      if (this._queued) return;
+      this._queued = true;
+      requestAnimationFrame(() => { this._queued = false; this._scrub(); });
+    };
+    window.addEventListener('scroll', this._tick, { passive: true });
+    document.addEventListener('scroll', this._tick, { capture: true, passive: true });
+    document.addEventListener('wheel', this._tick, { passive: true });
+    document.addEventListener('touchmove', this._tick, { passive: true });
+    window.addEventListener('resize', this._tick);
+    this._poll = setInterval(this._scrub, 120);
+    const v = document.getElementById('fig00vid');
+    if (v) {
+      v.pause();
+      v.addEventListener('loadedmetadata', this._scrub);
+      // non-faststart MP4s report seekable [0,0] when streamed; a local blob is fully seekable
+      fetch(v.src).then(r => r.blob()).then(b => {
+        this._blobUrl = URL.createObjectURL(b);
+        v.src = this._blobUrl;
+        v.load();
+        v.addEventListener('loadeddata', () => { this._scrub(); this._paint(); }, { once: true });
+      }).catch(() => {});
+    }
+    this._paint = () => {
+      const vid = document.getElementById('fig00vid');
+      if (!vid || vid.readyState < 2) return;
+      const pr = vid.play();
+      const stop = () => { vid.pause(); this._scrub(); };
+      if (pr && pr.then) pr.then(stop).catch(() => {}); else stop();
+    };
+    this._onShow = () => { this._scrub(); this._paint(); };
+    window.addEventListener('pageshow', this._onShow);
+    document.addEventListener('visibilitychange', this._onShow);
+    this._tick();
+    if (window.__imgGuard) return;
+    window.__imgGuard = true;
+    document.addEventListener('contextmenu', e => { if (e.target && e.target.tagName === 'IMG') e.preventDefault(); });
+    document.addEventListener('dragstart', e => e.preventDefault());
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._tick);
+    document.removeEventListener('scroll', this._tick, true);
+    document.removeEventListener('wheel', this._tick);
+    document.removeEventListener('touchmove', this._tick);
+    window.removeEventListener('resize', this._tick);
+    window.removeEventListener('pageshow', this._onShow);
+    document.removeEventListener('visibilitychange', this._onShow);
+    clearInterval(this._poll);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
