@@ -28,9 +28,12 @@ footer a:hover,.pn a:hover{color:#f2ece0}
 .bronze{color:#9c7a4d}
 .body{color:#2c2820;font-size:clamp(16px,1.15vw,18px);line-height:1.62}
 .lbl{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a8278}
-.nav{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid #e3dccd}
+.nav{position:fixed;left:0;right:0;top:0;z-index:200;background:rgba(245,242,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e3dccd}
 .navin{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{font-family:'Cormorant Garamond',serif;font-size:23px;color:#1a1a1a;text-decoration:none;font-weight:500}
+.navlinks{display:flex;gap:30px;align-items:center}
+.navlinks a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5a554c;text-decoration:none;transition:color .25s}
+.navlinks a:hover{color:#9c7a4d}
 .backlink{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5a554c;text-decoration:none;transition:color .25s}
 .backlink:hover{color:#9c7a4d}
 .ph{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:repeating-linear-gradient(135deg,#ece6da 0 13px,#e7dfd1 13px 26px);border:1px solid #dcd4c4}
@@ -63,10 +66,11 @@ img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-tou
 .pnnext{text-align:right}
 .pntitle{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3vw,42px);color:#ece6da;margin-top:10px;transition:color .25s}
 .pncell:hover .pntitle{color:#9c7a4d}
-@media(max-width:860px){.detail{grid-template-columns:1fr;gap:30px}.facts{position:static}.gal{grid-template-columns:1fr}.dtitle{font-size:clamp(40px,11vw,64px)}}
+@media(max-width:860px){.navlinks{gap:16px}.navlinks a{font-size:10px;letter-spacing:.1em}.detail{grid-template-columns:1fr;gap:30px}.facts{position:static}.gal{grid-template-columns:1fr}.dtitle{font-size:clamp(40px,11vw,64px)}}
 </style>
 </helmet>
-<div class="nav"><div class="wrap navin"><a href="index.html" class="brand">Ashish John</a><a href="index.html#work" class="backlink">← All Work</a></div></div>
+<div class="nav"><div class="wrap navin"><a href="index.html" class="brand">Ashish John</a><div class="navlinks"><a href="index.html#work">← All Work</a><a href="index.html#studio">Studio</a><a href="index.html#skills">Capabilities</a><a href="index.html#contact">Contact</a></div></div></div>
+<div style="height:74px"></div>
 <header class="wrap" style="padding-top:clamp(56px,9vw,110px);padding-bottom:clamp(34px,5vw,64px)"><div class="dnum">{{ p.num }}</div><div class="lbl" style="margin-top:14px">{{ p.meta }}</div><h1 class="dtitle">{{ p.title }}</h1><p class="dlede">{{ p.lede }}</p></header>
 <section class="wrap" style="padding-bottom:clamp(48px,7vw,96px)"><div class="ph" style="position:relative;aspect-ratio:{{ heroAspect }};padding:0"><img class="js-hero" alt="{{ p.title }}" style="width:100%;height:100%;object-fit:cover;display:block" /><sc-if value="{{ p.noHero }}" hint-placeholder-val="{{ false }}"><span class="phl" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">{{ p.heroLabel }}</span></sc-if></div></section>
 <section class="wrap" style="padding-bottom:clamp(56px,8vw,110px)"><div class="detail"><div class="facts"><sc-for list="{{ facts }}" as="f" hint-placeholder-count="5"><div class="factrow"><div class="lbl">{{ f.k }}</div><div class="factv">{{ f.v }}</div></div></sc-for></div><div><div class="bsec"><h4>Overview</h4><p class="body" style="max-width:60ch">{{ p.overview }}</p></div><div class="bsec"><h4>Material &amp; Mood</h4><p class="body" style="max-width:60ch">{{ p.material }}</p></div><div class="bsec"><h4>Approach</h4><p class="body" style="max-width:60ch">{{ p.approach }}</p></div></div></div></section>
@@ -114,6 +118,11 @@ class Component extends DCLogic {
     document.querySelectorAll('.js-tech').forEach((img, i) => {
       this.setImg(img, this._technical && this._technical[i]);
     });
+    document.querySelectorAll('.js-tech').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.title = 'Open full size';
+      img.addEventListener('click', () => { if (img.src) window.open(img.src, '_blank'); });
+    });
     document.querySelectorAll('.js-photo').forEach((img, i) => {
       this.setImg(img, this._photos && this._photos[i]);
     });
@@ -125,12 +134,12 @@ class Component extends DCLogic {
     const data = {
       kerala: {
         num: '01', title: 'Abode in Kerala', meta: 'Kerala, India — Private Residence',
-        lede: 'A house built around what it looks at: a river through one wall, a tree at its centre, and no clear line between inside and out.',
+        lede: 'A house that keeps something green in view from almost anywhere inside it, with a tree growing at the centre of the plan.',
         loc: 'Kerala, India', type: 'Private Residence', year: '2016\u20132019',
         scope: 'Full-home — living, dining, courtyard', role: 'Visualisation & CAD drawing',
         tools: 'AutoCAD · SketchUp · 3DS Max · V-Ray · Photoshop',
         hero: 'kerala-living-hero.jpg',
-        heroLabel: 'Living room \u2014 river view, evening',
+        heroLabel: 'Living room \u2014 evening',
         techNote: 'The modular kitchen set: three wall elevations numbering every basket, drawer, shelf and appliance against its dimension, with matching counter plans for each run.',
         technical: [
           { code: 'E-A', label: 'Elevation \u2014 Side A', img: 'kerala-cad-e-a.jpg' },
@@ -141,13 +150,13 @@ class Component extends DCLogic {
           { code: 'P-C', label: 'Counter Plan \u2014 Side C', img: 'kerala-cad-p-c.jpg' },
           { code: 'CP', label: 'Courtyard \u2014 floor pattern plan', img: 'kerala-courtyard-plan.jpg' }
         ],
-        overview: 'This house is organised around what it looks at. The living room gives up an entire wall to the river and the trees beyond it, so the view is not a feature of the room but the room\u2019s reason for facing that way. At the centre of the plan a skylit courtyard holds a single tree in a stone planter, put there so that a growing thing sits at the heart of the house and every route through it passes something being cared for. The family asked for a home that felt substantial without announcing itself. The answer was to spend the generosity on openness and daylight rather than ornament: high ceilings, long sightlines, and rooms that borrow light and green from one another instead of competing for attention.',
+        overview: 'This house is organised around what it looks at. The living room gives up an entire wall to the trees outside, so the view is not a feature of the room but the room\u2019s reason for facing that way. At the centre of the plan a skylit courtyard holds a single tree in a stone planter, put there so that a growing thing sits at the heart of the house and every route through it passes something being cared for. The family asked for a home that felt substantial without announcing itself. The answer was to spend the generosity on openness and daylight rather than ornament: high ceilings, long sightlines, and rooms that borrow light and green from one another instead of competing for attention.',
         material: 'The house runs on polished hardwood, close-laid teak strip flooring through the living rooms and bedrooms, against plain cream plaster, with dark-stained teak louvred shutters and a recessed teak ceiling raft over the seating. The kitchen changes register deliberately: teak-veneer fronts alternating with white lacquer, white solid-surface counters, a white tile backsplash and beige marble underfoot, so the working room reads cooler and brighter than the rooms around it. Olive and moss upholstery, ochre and green patterned rugs and small brass pieces carry the colour. In the courtyard the language turns rougher: split sandstone cladding, a black stone planter, and a floor pieced from timber boards and charcoal stone under a steel-gridded skylight.',
-        approach: 'The client asked for a home that stayed close to nature, and took that to mean the inside should not feel like a different place from the outside. So the work started with the two thresholds where that promise is either kept or broken: the living wall facing the river, and the courtyard at the centre of the plan. The courtyard was drawn out fully, a floor pattern piecing timber boards into charcoal stone dimensioned to the centimetre, because the point where the ground changes material is where a room stops being an interior. Sandstone was carried up its walls and a tree planted in the middle of it, so what the house looks at from within is the same substance it is built of. The kitchen was documented the same way, elevation by elevation, every basket and drawer numbered against its dimension. Only then was the house modelled and lit: high daylight through the middle of the day, hard skylight shadows travelling the courtyard wall, warm lamp pools after dark, and framed from where a person would actually stand: in a doorway, at the end of a reading sofa. The client was never shown a product shot, only an ordinary evening in a house that did not yet exist. It has since been built, and the photographs further down this page sit beside the drawings they came from.',
+        approach: 'The client asked for a home that stayed close to nature, and took that to mean the inside should not feel like a different place from the outside. So the work started with the two thresholds where that promise is either kept or broken: the living wall facing the garden, and the courtyard at the centre of the plan. The courtyard was drawn out fully, a floor pattern piecing timber boards into charcoal stone dimensioned to the centimetre, because the point where the ground changes material is where a room stops being an interior. Sandstone was carried up its walls and a tree planted in the middle of it, so what the house looks at from within is the same substance it is built of. The kitchen was documented the same way, elevation by elevation, every basket and drawer numbered against its dimension. Only then was the house modelled and lit: high daylight through the middle of the day, hard skylight shadows travelling the courtyard wall, warm lamp pools after dark, and framed from where a person would actually stand: in a doorway, at the end of a reading sofa. The client was never shown a product shot, only an ordinary evening in a house that did not yet exist. It has since been built, and the photographs further down this page sit beside the drawings they came from.',
         galAspect: '16/9',
-        photoNote: 'Photographs of the completed home, with the drawn set carried through to teak fronts, white counters and the river-facing living room.',
+        photoNote: 'Photographs of the completed home, with the drawn set carried through to teak fronts, white counters and the garden-facing living room.',
         photos: [
-          { label: 'Living room \u2014 river window', img: 'kerala-living-built.jpg' },
+          { label: 'Living room \u2014 window wall', img: 'kerala-living-built.jpg' },
           { label: 'Kitchen \u2014 sink & hob runs', img: 'kerala-kitchen-built.jpg' },
           { label: 'Kitchen \u2014 appliance wall & fridge', img: 'kerala-kitchen-photo.jpg' },
           { label: 'Courtyard \u2014 stone wall & planter, as built', img: 'kerala-courtyard-photo.jpg' }

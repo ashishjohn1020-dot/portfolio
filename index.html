@@ -29,7 +29,7 @@ a:hover{color:#1a1a1a}
 .body{color:#2c2820;font-size:clamp(16px,1.15vw,18px);line-height:1.62;font-weight:400}
 .lbl{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a8278}
 .rule{height:1px;background:#ddd5c6;border:0;margin:0}
-.nav{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid #e3dccd}
+.nav{position:fixed;left:0;right:0;top:0;z-index:200;background:rgba(245,242,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e3dccd}
 .navin{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{font-family:'Cormorant Garamond',serif;font-size:23px;letter-spacing:.01em;color:#1a1a1a;text-decoration:none;font-weight:500}
 .navlinks{display:flex;gap:34px;align-items:center}
@@ -71,6 +71,7 @@ a:hover{color:#1a1a1a}
 </style>
 </helmet>
 <div class="nav"><div class="wrap navin"><a href="#top" class="brand">Ashish John</a><div class="navlinks"><a href="#work">Work</a><a href="#studio">Studio</a><a href="#skills">Capabilities</a><a href="#contact">Contact</a></div></div></div>
+<div style="height:74px"></div>
 <div id="top"></div>
 <header class="wrap" style="padding-top:clamp(70px,12vw,150px);padding-bottom:clamp(40px,6vw,80px)"><div class="lbl" data-reveal>Interior Designer &amp; Visualiser — Selected Work, 2016–2026</div><h1 class="serif" data-reveal style="font-weight:300;font-size:clamp(40px,8vw,116px);line-height:1.0;letter-spacing:-.02em;margin:26px 0 0;max-width:16ch">Rooms that are felt before they are entered.</h1><p class="body" data-reveal style="max-width:54ch;margin:34px 0 0">I translate luxury residential concepts into material, light and mood, with visualisations built to make a space believable, desirable, and quietly inevitable long before it is built.</p></header>
 <section id="fig00wrap" style="position:relative;height:300vh;padding-bottom:clamp(40px,6vw,80px)"><div style="position:sticky;top:0;height:100vh;overflow:hidden;background:#1a1712"><video id="fig00vid" src="fig00-scroll.mp4" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;pointer-events:none"></video></div></section>
